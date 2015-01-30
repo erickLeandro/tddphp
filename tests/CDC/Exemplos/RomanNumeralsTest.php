@@ -37,10 +37,4 @@ class RomanNumeralsTest extends PHPUnit
     $this->assertEquals(22, $number);
   }
 
-  public function testHasUnderstandanSymbolIV()
-  {
-    $roman = new RomanNumberConverter();
-    $number = $roman->convert('IV');
-    $this->assertEquals(4, $number);
-  }
 }
