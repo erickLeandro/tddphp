@@ -9,6 +9,7 @@ use CDC\Loja\Produto\Produto;
 class CarrinhoDeCompras
 {
   private $produtos;
+  private $maior = 0;
   
   public function __construct()
   {
@@ -26,22 +27,19 @@ class CarrinhoDeCompras
     return $this->produtos;
   }
 
-  public function maiorValor()
+  public function encontra()
   {
-    if (count($this->getItens()) === 0):
+    if (count($this->getProdutos()) === 0):
       return 0;
     endif;
 
-    $maiorValor = $this->getProdutos()[0]->getValor();
-
     foreach ($this->getProdutos() as $produto):
-      if ($maiorValor < $produto->getValor()):
-        $maiorValor = $produto->getValor();
+      if ($this->maior < $produto->getValorTotal()):
+        $this->maior = $produto->getValorTotal();
       endif;
     endforeach;
 
-    return $maiorValor;
-
-  }
+    return $this->maior;
+  }  
 
 }
