@@ -23,7 +23,7 @@ class Cargo
 
   public function getRegra()
   {
-    return $this->regra;
+    return new $this->regra;
   }
 
 }
