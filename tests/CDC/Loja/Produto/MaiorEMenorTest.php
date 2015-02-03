@@ -1,6 +1,6 @@
 <?php
 
-namespace CDC\Loja;
+namespace CDC\Loja\Produto;
 
 require "./vendor/autoload.php";
 

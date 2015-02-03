@@ -1,6 +1,7 @@
 {
     "require": {
-      "phpunit/phpunit": "4.6.*@dev"
+      "phpunit/phpunit": "4.6.*@dev",
+      "mockery/mockery": "*"
     },
     "autoload": {
         "psr-4": {
